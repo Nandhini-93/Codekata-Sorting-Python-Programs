@@ -1,0 +1,29 @@
+n = int(input())
+l = [int(x) for x in input().split()]
+e = []
+o = []
+for i in range(n):
+    if i % 2 == 0:
+        e.append(l[i])
+    else:
+        o.append(l[i])
+e.sort()
+o.sort(reverse = True)
+p = 0
+q = 0
+l = []
+for i in range(n):
+    if i%2==0:
+        l.append(e[p])
+        p+=1
+    else:
+        l.append(o[q])
+        q+=1
+print(*l)
+
+Sample Input :
+10 
+9 8 7 1 2 3 6 5 4 10
+
+Sample Output :
+2 10 4 8 6 5 7 3 9 1
